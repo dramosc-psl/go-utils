@@ -25,8 +25,15 @@ func Client(req *http.Request) string {
 	// Sometimes an IP with a port can get through. So we trim it.
 	ip, _, err := net.SplitHostPort(first)
 	if err != nil {
-		return first
+		return cleanIPv6(first)
 	}
 
 	return ip
+}
+
+func cleanIPv6(addr string) string {
+	addr = strings.Trim(addr, "[")
+	addr = strings.Trim(addr, "]")
+
+	return addr
 }
