@@ -23,5 +23,5 @@ func main() {
 
 ### Todo
 
-- Add Tests
-- Verify IPv6 Support (a.k.a. Tests)
+- ~~Add Tests~~
+- ~~Verify IPv6 Support (a.k.a. Tests)~~
